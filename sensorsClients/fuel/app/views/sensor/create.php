@@ -6,3 +6,13 @@
 
 </ul>
 <p>Create</p>
+<!-- 
+<form action="saveSensor" method="POST">
+	<label>Name</label>
+		<input type="text" class="form-control" id="name" name="name">
+	<label>Id</label>
+	<input type="int" class="form-control" id="id" name="id">
+	<label>Unit</label>
+	<input type="text" class="form-control" id="unit" name="unit">
+	<button type="submit">Submit</button>
+</form> -->

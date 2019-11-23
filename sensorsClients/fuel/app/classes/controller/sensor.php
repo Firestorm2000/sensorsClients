@@ -19,7 +19,7 @@ class Controller_Sensor extends Controller_Template
 
 	public function action_update()
 	{
-		$data["subnav"] = array('update'=> 'active' );
+		$data["subnav"] = array('update'=> 'active');
 		$this->template->title = 'Sensor &raquo; Update';
 		$this->template->content = View::forge('sensor/update', $data);
 	}
@@ -27,6 +27,8 @@ class Controller_Sensor extends Controller_Template
 	public function action_read()
 	{
 		$data["subnav"] = array('read'=> 'active' );
+		$sensors = Model_Sensor::find('all');
+		$data -> set('sensors',$sensors);
 		$this->template->title = 'Sensor &raquo; Read';
 		$this->template->content = View::forge('sensor/read', $data);
 	}
