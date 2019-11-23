@@ -27,10 +27,15 @@ class Controller_Sensor extends Controller_Template
 	public function action_read()
 	{
 		$data["subnav"] = array('read'=> 'active' );
-		$sensors = Model_Sensor::find('all');
-		$data -> set('sensors',$sensors);
+		// $sensors = Model_Sensor::find('all');
+		// $data -> set('sensors',$sensors);
 		$this->template->title = 'Sensor &raquo; Read';
 		$this->template->content = View::forge('sensor/read', $data);
 	}
+	// public function saveSensor(){
+	// 	//$data["subnav"] = array('save'=> 'active' );
+	// 	$this->template->title = 'Sensor &raquo; Save';
+	// 	$this->template->content = View::forge('sensor/read', '');
+	// }
 
 }

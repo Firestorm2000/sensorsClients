@@ -6,7 +6,7 @@
 
 </ul>
 <p>Create</p>
-<!-- 
+
 <form action="saveSensor" method="POST">
 	<label>Name</label>
 		<input type="text" class="form-control" id="name" name="name">
@@ -15,4 +15,4 @@
 	<label>Unit</label>
 	<input type="text" class="form-control" id="unit" name="unit">
 	<button type="submit">Submit</button>
-</form> -->
+</form>
