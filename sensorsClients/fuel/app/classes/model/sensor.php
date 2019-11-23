@@ -42,7 +42,14 @@ class Model_Sensor extends \Orm\Model
 
 	protected static $_primary_key = array('id');
 
-	protected static $_has_many = array(
+	protected static $_has_many = array( //has many
+		'reports' => array(
+			'key_form' => 'id',
+			'model_to'=>'Model_Report',
+			'key_to' => 'sensor_id',
+			'cascade_save' => true,
+			'cascade_delete' => false,
+		)
 	);
 
 	protected static $_many_many = array(

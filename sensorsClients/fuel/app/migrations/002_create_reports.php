@@ -8,6 +8,7 @@ class Create_reports
 	{
 		\DBUtil::create_table('reports', array(
 			'id' => array('type' => 'int', 'unsigned' => true, 'null' => false, 'auto_increment' => true, 'constraint' => 11),
+			'sensor_id'=> array('type' => 'int'),
 			'value' => array('constraint' => 10, 'null' => false, 'type' => 'varchar'),
 			'timestamp' => array('constraint' => 11, 'null' => false, 'type' => 'int'),
 			'created_at' => array('constraint' => 11, 'null' => true, 'type' => 'int', 'unsigned' => true),
