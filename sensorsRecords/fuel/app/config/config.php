@@ -11,6 +11,11 @@
  */
 
 return array(
+	'always_load' => array(
+		'packages'=> array(
+			'orm'
+		),
+	),
 	/**
 	 * -------------------------------------------------------------------------
 	 *  The base URL of the application
