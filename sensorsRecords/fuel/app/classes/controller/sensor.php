@@ -30,8 +30,8 @@ class Controller_Sensor extends Controller_Template
 			if ($val->run())
 			{
 				$sensor = Model_Sensor::forge(array(
-					'name' => Input::post('name'),
 					'id' => Input::post('id'),
+					'name' => Input::post('name'),
 					'unit' => Input::post('unit'),
 				));
 
@@ -68,8 +68,8 @@ class Controller_Sensor extends Controller_Template
 
 			if ($val->run())
 			{
-				$sensor->name = Input::post('name');
 				$sensor->id = Input::post('id');
+				$sensor->name = Input::post('name');
 				$sensor->unit = Input::post('unit');
 
 				if ($sensor->save())

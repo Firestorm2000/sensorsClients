@@ -4,8 +4,8 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Name</th>
 			<th>Id</th>
+			<th>Name</th>
 			<th>Unit</th>
 			<th></th>
 		</tr>
@@ -13,8 +13,8 @@
 	<tbody>
 <?php foreach ($sensors as $item): ?>		<tr>
 
-			<td><?php echo $item->name; ?></td>
 			<td><?php echo $item->id; ?></td>
+			<td><?php echo $item->name; ?></td>
 			<td><?php echo $item->unit; ?></td>
 			<td>
 				<?php echo Html::anchor('sensor/view/'.$item->id, 'View'); ?> |

@@ -7,10 +7,9 @@ class Create_sensors
 	public function up()
 	{
 		\DBUtil::create_table('sensors', array(
-			'id' => array('type' => 'int', 'unsigned' => true, 'null' => false, 'auto_increment' => false,),
-			'name' => array('constraint' => '255', 'null' => false, 'type' => 'varchar'),
-			'unit' => array('null' => false, 'type' => 'text'),
-			
+			'id' => array('type' => 'int', 'unsigned' => true, 'null' => false, 'auto_increment' => true, 'constraint' => '11'),
+			'name' => array('constraint' => 30, 'null' => false, 'type' => 'varchar'),
+			'unit' => array('constraint' => 30, 'null' => false, 'type' => 'varchar'),
 		), array('id'));
 	}
 
