@@ -68,13 +68,13 @@ class Controller_Sensor extends Controller_Template
 
 			if ($val->run())
 			{
-				$sensor->id = Input::post('id');
+				//$sensor->id = Input::post('id');
 				$sensor->name = Input::post('name');
 				$sensor->unit = Input::post('unit');
 
 				if ($sensor->save())
 				{
-					Session::set_flash('success', 'Updated sensor #'.$id);
+					Session::set_flash('success', 'Updated sensor ');
 					Response::redirect('sensor');
 				}
 				else
