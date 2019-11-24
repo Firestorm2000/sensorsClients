@@ -12,10 +12,8 @@ class Controller_Reports extends Controller_Rest
 	public function get_report(){
 		return $this ->response(
 			array(
-				'foo'=>Input::get('foo'),
-				'baz'=>array(
-					1,50,219
-				),
+				'id'=>Input::get('id'),
+				'value'=>Input::get('value'),
 				'empty' => null
 			)
 		);
