@@ -6,7 +6,8 @@ return array(
     array(
       'default' => 
       array(
-        0 => '001_create_sensors',
+        0 => '003_create_sensors',
+        1 => '004_create_reports',
       ),
     ),
     'module' => 

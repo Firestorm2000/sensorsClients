@@ -1,12 +1,12 @@
 <?php echo Form::open(array("class"=>"form-horizontal")); ?>
 
 	<fieldset>
-		<div class="form-group">
-			<?php echo Form::label('Id', 'id', array('class'=>'control-label')); ?>
+		<!-- <div class="form-group">
+			<?php// echo Form::label('Id', 'id', array('class'=>'control-label')); ?>
 
-				<?php echo Form::input('id', Input::post('id', isset($sensor) ? $sensor->id : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Id')); ?>
+				<?php //echo Form::input('id', Input::post('id', isset($sensor) ? $sensor->id : ''), array('class' => 'col-md-4 form-control', 'placeholder'=>'Id')); ?>
 
-		</div>
+		</div> -->
 		<div class="form-group">
 			<?php echo Form::label('Name', 'name', array('class'=>'control-label')); ?>
 

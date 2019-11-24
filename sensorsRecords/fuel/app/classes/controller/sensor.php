@@ -30,14 +30,14 @@ class Controller_Sensor extends Controller_Template
 			if ($val->run())
 			{
 				$sensor = Model_Sensor::forge(array(
-					'id' => Input::post('id'),
+					//'id' => Input::post('id'),
 					'name' => Input::post('name'),
 					'unit' => Input::post('unit'),
 				));
 
 				if ($sensor and $sensor->save())
 				{
-					Session::set_flash('success', 'Added sensor #'.$sensor->id.'.');
+					Session::set_flash('success', 'Added sensor');
 					Response::redirect('sensor');
 				}
 				else
