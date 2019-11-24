@@ -5,7 +5,7 @@ class Controller_Reports extends Controller_Rest
 
 	public function action_index()
 	{
-		$data["subnav"] = array('index'=> 'active' );
+		$data['reports'] = Model_Report::find_all();
 		$this->template->title = 'Reports &raquo; Index';
 		$this->template->content = View::forge('reports/index', $data);
 	}
