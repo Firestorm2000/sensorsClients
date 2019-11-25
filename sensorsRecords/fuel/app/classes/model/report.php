@@ -57,5 +57,13 @@ class Model_Report extends \Orm\Model
 
 	protected static $_belongs_to = array(
 	);
+	public static function show_reports(){
+			 $results = DB::select()->from('reports')
+			 												->as_object('Model_Report')
+															->order_by('reported','asc')
+															->execute()
+															->as_array();
+			 return $results;
+	}
 
 }
