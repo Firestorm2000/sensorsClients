@@ -9,6 +9,9 @@
 <p>
 	<strong>Unit:</strong>
 	<?php echo $sensor->unit; ?></p>
+	<script >
+	//console.log('id',<?php $sensor->id?>);
+	 </script>
 
 <?php echo Html::anchor('sensor/edit/'.$sensor->id, 'Edit'); ?> |
 <?php echo Html::anchor('sensor', 'Back'); ?>

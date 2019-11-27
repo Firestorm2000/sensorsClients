@@ -19,7 +19,7 @@ class Controller_Reports extends Controller_Rest
 
 				return $this ->response(
 					array(
-						'id'=>Input::get('id'),
+						'id'=>Model_Report::find('id'),
 						'value'=>Input::get('value'),
 						'timestamp'=> time(),
 						'empty' => null
