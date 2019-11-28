@@ -28,4 +28,18 @@ class Controller_Reports extends Controller_Rest
 
 
 	}
+	public function get_reportSort(){
+		$value= Input::get('value');
+		$dir =Input::get('dir');
+		$reports = Model_Report::show_reports($value,$dir);
+		//$ReportController = new Controller_Report();
+		//$ReportController->action_index()->template->title = "Reports";
+		//$report->template->content = View::forge('report/index',array('reports'=>$reports));
+		//Response::redirect('report');
+		return $this ->response(array(
+			'value'=>Input::get('value'),
+			'dir'=>Input::get('dir'),
+			'model'=>Model_Report::show_reports($value,$dir)
+		));
+	}
 }

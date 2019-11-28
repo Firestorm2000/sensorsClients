@@ -6,10 +6,10 @@
 <table class="table table-striped" id="myTable2">
 	<thead>
 		<tr>
-
-			<th onclick="sortTable(0)">Value</th>
+			<!-- <th onclick="sortTable(0)">Value</th>
 			<th onclick="sortTable(1)">Sensor</th>
-			<th onclick="sortTable(2)">Reported at</th>
+			<th onclick="sortTable(2)">Reported at</th> -->
+			<th><a href = "http://www.localhost:8000/reports/reportSort?value=value&&dir=asc">Value</a></th>
 			<th></th>
 		</tr>
 	</thead>
@@ -23,7 +23,8 @@
 		</tr>
 <?php endforeach; ?>	</tbody>
 </table>
-<script>
+<!-- with javascript belowe-->
+<!-- <script>
 function types(i){
 	if(isNaN(i))i=i.toLowerCase();
 	else i=parseInt(i);
@@ -85,7 +86,7 @@ function sortTable(n) {
     }
   }
 }
-</script>
+</script> -->
 <?php else: ?>
 <p>No Reports.</p>
 
