@@ -4,10 +4,12 @@ class Controller_Report extends Controller_Template{
   {
     if (Input::method() == 'POST'){
       $value = Input::post('value');
-      $reports = Model_Report::show_reports($value,'asc');
+      if(Input::post('dirs')){
+          $reports = Model_Report::show_reports($value,'asc');
+      } else $reports = Model_Report::show_reports($value,'desc');
     } else {
       $value ='value';
-      $reports = Model_Report::show_reports($value,'desc');
+      $reports = Model_Report::show_reports($value,'asc');
     }
 
     $this->template->title = "Reports";
