@@ -57,7 +57,11 @@ class Model_Report extends \Orm\Model
 
 	protected static $_belongs_to = array(
 	);
+	//function for showing all reports in the index page of the report controller
+	//$order -> the column for ORDER BY
+	//$dir -> ASC or DESC
 	public static function show_reports($order,$dir){
+		//query with the given values
 			 $results = DB::select()->from('reports')
 			 												->as_object('Model_Report')
 															->order_by($order,$dir)

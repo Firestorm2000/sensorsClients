@@ -1,4 +1,5 @@
 <?php echo Form::open(array("class"=>"form-horizontal")); ?>
+<!--form for create,edit created with scaffold-->
 
 	<fieldset>
 		<div class="form-group">

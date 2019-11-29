@@ -2,7 +2,7 @@
 class Model_Sensor extends Model_Crud
 {
 	protected static $_table_name = 'sensors';
-
+	//validation for correct data types
 	public static function validate($factory)
 	{
 		$val = Validation::forge($factory);
@@ -11,15 +11,6 @@ class Model_Sensor extends Model_Crud
 
 		return $val;
 	}
-	protected static $_has_many = array( //has many
-		'reports' => array(
-			'key_form' => 'id',
-			'model_to'=>'Model_Report',
-			'key_to' => 'sensor_id',
-			'cascade_save' => true,
-			'cascade_delete' => false,
-		)
-	);
 
 
 }

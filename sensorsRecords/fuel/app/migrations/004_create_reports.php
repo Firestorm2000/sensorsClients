@@ -1,5 +1,5 @@
 <?php
-
+//migration for the reports sensor_id,value,reported
 namespace Fuel\Migrations;
 
 class Create_reports

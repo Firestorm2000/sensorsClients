@@ -11,12 +11,13 @@
 		</tr>
 	</thead>
 	<tbody>
+<!--showing all sensors-->
 <?php foreach ($sensors as $item): ?>		<tr>
 
 			<td><?php echo $item->id; ?></td>
 			<td><?php echo $item->name; ?></td>
 			<td><?php echo $item->unit; ?></td>
-			<td>
+			<td><!--other options-->
 				<?php echo Html::anchor('sensor/view/'.$item->id, 'View'); ?> |
 				<?php echo Html::anchor('sensor/edit/'.$item->id, 'Edit'); ?> |
 				<?php echo Html::anchor('sensor/delete/'.$item->id, 'Delete', array('onclick' => "return confirm('Are you sure?')")); ?>

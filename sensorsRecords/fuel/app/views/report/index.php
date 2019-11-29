@@ -5,21 +5,28 @@
 <?php if ($reports): ?>
 <table class="table table-striped" id="myTable2">
 	<thead>
+		<!--Using Form fo send to the report controller
+		which column we want to use in the order by and the direction-->
 		<?php echo Form::open(array('action'=>'report','method'=>'post')); ?>
 		<tr>
-			<!-- <th onclick="sortTable(0)">Value</th>
+			<!-- This is for the sort using JS,
+			 onclick calling the method sortTable
+
+			<th onclick="sortTable(0)">Value</th>
 			<th onclick="sortTable(1)">Sensor</th>
 			<th onclick="sortTable(2)">Reported at</th> -->
-
+			<!-- Three buttons sending 'value'=... and checkbox-->
 			<span><?php echo Form::label('Check or uncheck to change direction','Change direction',array('class'=>'control-label'));?></span>
 			<span><?php echo Form::checkbox('dir',1,Input::post('dir',0));?></span>
 			<th><?php echo Form::button('value','value',array('value'=>'value'));?></th>
 			<th><?php echo Form::button('value','sensor_id',array('value'=>'sensor_id'));?></th>
 			<th><?php echo Form::button('value','reported',array('value'=>'reported'));?></th>
+			<!--End form-->
 			<?php echo Form::close();?>
 		</tr>
 	</thead>
 	<tbody>
+		<!--showing the reports-->
 		<?php $reports ?>
 <?php foreach ($reports as $item): ?>		<tr>
 
@@ -29,14 +36,17 @@
 		</tr>
 <?php endforeach; ?>	</tbody>
 </table>
-<!-- with javascript belowe-->
+<!-- sorting with javascript below-->
 <!-- <script>
 function types(i){
 	if(isNaN(i))i=i.toLowerCase();
 	else i=parseInt(i);
 	return i;
 }
-function sortTable(n) {
+<!-- function from example in W3School
+with added function types() for correcting
+the problem with sorting numeric columns-->
+<!-- function sortTable(n) {
   var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
   table = document.getElementById("myTable2");
   switching = true;

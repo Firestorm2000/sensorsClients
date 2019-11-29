@@ -18,7 +18,7 @@
  *  These settings get merged with the global settings.
  *
  */
-
+//setting the database
 return array(
 	'default' => array(
 		'connection' => array(

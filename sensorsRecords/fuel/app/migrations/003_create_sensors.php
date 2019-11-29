@@ -1,4 +1,5 @@
 <?php
+//migration for the sensors id,name,unit
 
 namespace Fuel\Migrations;
 

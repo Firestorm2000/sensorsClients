@@ -1,9 +1,10 @@
 <?php
 class Controller_Sensor extends Controller_Template
 {
-
+	//CRUD operations index,view,create,edit,delete from scaffold
 	public function action_index()
 	{
+		//finding all records 
 		$data['sensors'] = Model_Sensor::find_all();
 		$this->template->title = "Sensors";
 		$this->template->content = View::forge('sensor/index', $data);
@@ -12,6 +13,7 @@ class Controller_Sensor extends Controller_Template
 
 	public function action_view($id = null)
 	{
+		//if the id doesn't exits
 		is_null($id) and Response::redirect('sensor');
 
 		$data['sensor'] = Model_Sensor::find_by_pk($id);
@@ -25,18 +27,20 @@ class Controller_Sensor extends Controller_Template
 	{
 		if (Input::method() == 'POST')
 		{
+			//validation for correct data types
 			$val = Model_Sensor::validate('create');
 
 			if ($val->run())
 			{
+				//creating sensor object
 				$sensor = Model_Sensor::forge(array(
-					//'id' => Input::post('id'),
 					'name' => Input::post('name'),
 					'unit' => Input::post('unit'),
 				));
 
 				if ($sensor and $sensor->save())
 				{
+					//saving sensor object
 					Session::set_flash('success', 'Added sensor');
 					Response::redirect('sensor');
 				}
@@ -58,17 +62,18 @@ class Controller_Sensor extends Controller_Template
 
 	public function action_edit($id = null)
 	{
+		//not found if the id doesn't exits
 		is_null($id) and Response::redirect('sensor');
 
 		$sensor = Model_Sensor::find_one_by_id($id);
 
 		if (Input::method() == 'POST')
 		{
+			//validation for correct data types
 			$val = Model_Sensor::validate('edit');
 
 			if ($val->run())
 			{
-				//$sensor->id = Input::post('id');
 				$sensor->name = Input::post('name');
 				$sensor->unit = Input::post('unit');
 
