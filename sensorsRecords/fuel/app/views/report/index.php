@@ -5,17 +5,15 @@
 <?php if ($reports): ?>
 <table class="table table-striped" id="myTable2">
 	<thead>
+		<?php echo Form::open(array('action'=>'report','method'=>'post')); ?>
 		<tr>
 			<!-- <th onclick="sortTable(0)">Value</th>
 			<th onclick="sortTable(1)">Sensor</th>
 			<th onclick="sortTable(2)">Reported at</th> -->
-
-			<?php echo Form::open(array('action'=>'report','method'=>'post')); ?>
 			<th><?php echo Form::button('value','value',array('value'=>'value'));?></th>
 			<th><?php echo Form::button('value','sensor_id',array('value'=>'sensor_id'));?></th>
 			<th><?php echo Form::button('value','reported',array('value'=>'reported'));?></th>
-					<?php echo Form::close();?>
-			<th></th>
+			<?php echo Form::close();?>
 		</tr>
 	</thead>
 	<tbody>
