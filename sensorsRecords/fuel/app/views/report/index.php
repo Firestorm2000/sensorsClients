@@ -9,7 +9,12 @@
 			<!-- <th onclick="sortTable(0)">Value</th>
 			<th onclick="sortTable(1)">Sensor</th>
 			<th onclick="sortTable(2)">Reported at</th> -->
-			<th><a href = "http://www.localhost:8000/reports/reportSort?value=value&&dir=asc">Value</a></th>
+
+			<?php echo Form::open(array('action'=>'report','method'=>'post')); ?>
+			<th><?php echo Form::button('value','value');?></th>
+			<th><?php echo Form::button(array('value','sensor_id'),'Id');?></th>
+			<th><?php echo Form::button(array('value','reported'),'reported');?></th>
+					<?php echo Form::close();?>
 			<th></th>
 		</tr>
 	</thead>

@@ -2,10 +2,11 @@
 class Controller_Report extends Controller_Template{
   public function action_index()
   {
-    //$order_column = recorded;
-    $reports = Model_Report::show_reports('reported','asc');
-    // $value = 'reported';
-    // $dir ='asc'
+    if (Input::method() == 'POST'){
+      $value = Input::post('value');
+      $value='sensor_id';
+    } else $value ='reported';
+    $reports = Model_Report::show_reports($value,'asc');
     $this->template->title = "Reports";
     $this->template->content = View::forge('report/index',
                                 array('reports'=>$reports,
@@ -14,4 +15,25 @@ class Controller_Report extends Controller_Template{
                                     ));
 
   }
+  /*public function action_sort(){
+    if (Input::method() == 'POST'){
+      $value = Input::post('value');
+      $value='sensor_id';
+    } else $value ='reported';
+    $reports = Model_Report::show_reports($value,'asc');
+    $this->template->title = "Reports";
+    $this->template->content = View::forge('report/index',
+                                array('reports'=>$reports,
+                                      // 'dir'=>$dir,
+                                      // 'value'=>$value
+                                    ));
+  }*/
+  // public function get_index($value,$dir){
+  //   $reports = Model_Report::show_reports($value,$dir);
+  //   Session::setFlash('value',$value);
+  //   $this->template->title = "Reports";
+  //   $this->template->content = View::forge('report/index',
+  //                               array('reports'=>$reports,
+  //                                   ));
+  // }
 }

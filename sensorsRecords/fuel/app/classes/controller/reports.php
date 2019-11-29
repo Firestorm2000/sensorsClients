@@ -28,7 +28,7 @@ class Controller_Reports extends Controller_Rest
 
 
 	}
-	public function get_reportSort(){
+	/*public function get_reportSort(){
 		$value= Input::get('value');
 		$dir =Input::get('dir');
 		$reports = Model_Report::show_reports($value,$dir);
@@ -41,5 +41,5 @@ class Controller_Reports extends Controller_Rest
 			'dir'=>Input::get('dir'),
 			'model'=>Model_Report::show_reports($value,$dir)
 		));
-	}
+	}*/
 }
