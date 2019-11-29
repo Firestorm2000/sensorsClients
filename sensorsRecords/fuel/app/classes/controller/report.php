@@ -4,8 +4,7 @@ class Controller_Report extends Controller_Template{
   {
     if (Input::method() == 'POST'){
       $value = Input::post('value');
-      $value='sensor_id';
-    } else $value ='reported';
+    } else $value ='value';
     $reports = Model_Report::show_reports($value,'asc');
     $this->template->title = "Reports";
     $this->template->content = View::forge('report/index',

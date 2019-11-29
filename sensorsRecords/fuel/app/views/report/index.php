@@ -11,9 +11,9 @@
 			<th onclick="sortTable(2)">Reported at</th> -->
 
 			<?php echo Form::open(array('action'=>'report','method'=>'post')); ?>
-			<th><?php echo Form::button('value','value');?></th>
-			<th><?php echo Form::button(array('value','sensor_id'),'Id');?></th>
-			<th><?php echo Form::button(array('value','reported'),'reported');?></th>
+			<th><?php echo Form::button('value','value',array('value'=>'value'));?></th>
+			<th><?php echo Form::button('value','sensor_id',array('value'=>'sensor_id'));?></th>
+			<th><?php echo Form::button('value','reported',array('value'=>'reported'));?></th>
 					<?php echo Form::close();?>
 			<th></th>
 		</tr>
