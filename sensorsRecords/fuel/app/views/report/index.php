@@ -16,8 +16,6 @@
 			<th onclick="sortTable(1)">Sensor</th>
 			<th onclick="sortTable(2)">Reported at</th> -->
 			<!-- Three buttons sending 'value'=... and checkbox-->
-			<span><?php echo Form::label('Check or uncheck to change direction','Change direction',array('class'=>'control-label'));?></span>
-			<span><?php echo Form::checkbox('dir',1,Input::post('dir',0));?></span>
 			<th><?php echo Form::button('value','value',array('value'=>'value'));?></th>
 			<th><?php echo Form::button('value','sensor_id',array('value'=>'sensor_id'));?></th>
 			<th><?php echo Form::button('value','reported',array('value'=>'reported'));?></th>
